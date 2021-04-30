@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TechnicalSupportActivities</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btnlg">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="shared_preference_name">com.projectassyifa.shared.preference</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="id_akun">ID Akun</string>
+    <string name="akun_level">Akun Level</string>
+    <string name="login_method_key">LOGIN_METHOD</string>
+    <string name="default_value">Default</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+</resources>

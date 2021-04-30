@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/loginScreen">
+    <action
+        android:id="@+id/action_loginScreen_to_homeActivity"
+        app:destination="@id/homeActivity" />
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.projectassyifa.technicalsupportactivities.screen.login.LoginScreen"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.projectassyifa.technicalsupportactivities.activity.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+</navigation>
