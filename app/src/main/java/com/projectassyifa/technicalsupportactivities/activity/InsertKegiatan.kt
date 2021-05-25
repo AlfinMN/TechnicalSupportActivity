@@ -66,6 +66,8 @@ class InsertKegiatan : AppCompatActivity() {
                 getString(R.string.default_value)
         )
         println("ID AKUN $idAkun")
+
+        //simpan kegiatan
         savekegiatan.setOnClickListener {
             val addKegiatanContent = AddKegiatanModel()
             addKegiatanContent.id_akun = idAkun.toString()

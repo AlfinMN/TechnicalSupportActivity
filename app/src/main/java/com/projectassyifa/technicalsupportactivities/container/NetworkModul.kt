@@ -3,6 +3,7 @@ package com.projectassyifa.technicalsupportactivities.container
 import com.projectassyifa.technicalsupportactivities.config.Connect
 import com.projectassyifa.technicalsupportactivities.data.Kegiatan.api.AddKegiatanAPI
 import com.projectassyifa.technicalsupportactivities.data.Kegiatan.api.GetKegiatanByIdAPI
+import com.projectassyifa.technicalsupportactivities.data.Kegiatan.api.UpdateStatusAPI
 import com.projectassyifa.technicalsupportactivities.data.login.api.UserLoginAPI
 import dagger.Module
 import dagger.Provides
@@ -20,5 +21,9 @@ class NetworkModul {
     @Provides
     fun provideGetKegiatanByIdAPI(): GetKegiatanByIdAPI {
         return Connect.urlGlobal().create(GetKegiatanByIdAPI::class.java)
+    }
+    @Provides
+    fun provideUpdateStatusAPI(): UpdateStatusAPI {
+        return Connect.urlGlobal().create(UpdateStatusAPI::class.java)
     }
 }

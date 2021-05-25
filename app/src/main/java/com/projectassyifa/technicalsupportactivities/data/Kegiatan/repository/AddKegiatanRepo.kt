@@ -28,7 +28,7 @@ class AddKegiatanRepo @Inject constructor(val addKegiatanAPI: AddKegiatanAPI) {
             override fun onResponse(call: Call<KerangkaResponse>, response: Response<KerangkaResponse>) {
                val res = response.body()
                 println("MASUK REPO ADD ${res}")
-res?.status
+                res?.status
                 val stringResponse = Gson().toJson(res)
                 val dataKegiatanContent = Gson().fromJson<KerangkaResponse>(stringResponse,KerangkaResponse::class.java)
                 kegiatanResponse.value =dataKegiatanContent
