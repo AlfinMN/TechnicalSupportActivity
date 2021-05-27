@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.projectassyifa.technicalsupportactivities.R
 import com.projectassyifa.technicalsupportactivities.activity.HomeActivity
 import com.projectassyifa.technicalsupportactivities.activity.ReportActivity
+import com.projectassyifa.technicalsupportactivities.activity.ReportAllUser
 import com.projectassyifa.technicalsupportactivities.container.MyApplication
 import com.projectassyifa.technicalsupportactivities.data.Kegiatan.adapter.KegiatanByIdAdapter
 import com.projectassyifa.technicalsupportactivities.data.Kegiatan.viewmodel.KegiatanByIdViewModel
@@ -67,6 +68,10 @@ class HomeScreen : Fragment() {
 //        kegiatanByIdViewModel.kegiatanById(idAkun.toString())
         btn_report.setOnClickListener {
             val intent = Intent(getContext(), ReportActivity::class.java)
+            startActivity(intent)
+        }
+        btn_reportUser.setOnClickListener {
+            val intent = Intent(getContext(), ReportAllUser::class.java)
             startActivity(intent)
         }
     }

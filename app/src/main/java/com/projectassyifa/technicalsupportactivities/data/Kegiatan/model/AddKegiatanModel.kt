@@ -3,6 +3,7 @@ package com.projectassyifa.technicalsupportactivities.data.Kegiatan.model
 class AddKegiatanModel {
     var id : String = ""
     var id_akun : String = ""
+    var username : String = ""
     var tanggal : String = ""
     var lokasi : String =""
     var aktivitas : String =""

@@ -14,16 +14,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-<!--        <TextView-->
-<!--            android:layout_margin="2dp"-->
-<!--            android:gravity="center"-->
-<!--            android:id="@+id/id"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="id"-->
-<!--            android:textColor="@color/navy"-->
-<!--            android:textSize="9dp" />-->
+                <TextView
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:id="@+id/nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="nama"
+                    android:textStyle="bold"
+                    android:textColor="@color/navy"
+                    android:textSize="9dp" />
         <TextView
             android:layout_margin="2dp"
             android:gravity="center"
@@ -32,7 +33,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Lokasi"
-            android:textStyle="bold"
             android:textColor="@color/navy"
             android:textSize="9dp" />
 

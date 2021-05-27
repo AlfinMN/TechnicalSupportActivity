@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ReportAllUser">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<!--        <ImageView-->
+<!--            android:id="@+id/btn_tglAwal"-->
+<!--            android:clickable="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:src="@drawable/ic_calender"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/viewTglAwal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginTop="22dp"-->
+<!--            android:text=""-->
+<!--            android:textColor="@color/navy"-->
+<!--            android:textSize="13dp"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/btn_tglAwal"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/btn_tglAkhir"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:clickable="true"-->
+<!--            android:src="@drawable/ic_calender"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/viewTglAwal"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/viewTglAkhir"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginTop="22dp"-->
+<!--            android:text=""-->
+<!--            android:textColor="@color/navy"-->
+<!--            android:textSize="13dp"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/btn_tglAkhir"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/btn_search"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:clickable="true"-->
+<!--            android:src="@drawable/search"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+        <TextView
+            android:id="@+id/activitytext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Report All User"
+            android:textColor="@color/navy"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/lines"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp"
+            android:background="@color/navy"
+            app:layout_constraintTop_toBottomOf="@+id/activitytext"/>
+        <LinearLayout
+
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lines">
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/nama_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textSize="11dp"
+                        android:text="Nama"
+                        android:textColor="@color/navy"
+                        />
+            <TextView
+                android:gravity="center"
+                android:id="@+id/lokasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="11dp"
+                android:text="Lok"
+                android:textColor="@color/navy"
+                />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tgl"
+                android:textColor="@color/navy"
+                android:textStyle="bold"
+                android:textSize="11dp" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/aktivitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="akt"
+                android:textColor="@color/navy"
+                android:textStyle="bold"
+                android:textSize="11dp"/>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="des"
+                android:textColor="@color/navy"
+                android:textStyle="bold"
+                android:textSize="11dp"/>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="status"
+                android:textColor="@color/navy"
+                android:textStyle="bold"
+                android:textSize="11dp"/>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/foto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="foto awal"
+                android:textColor="@color/navy"
+                android:textStyle="bold"
+                android:textSize="11dp"/>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/fotoProses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="foto proses"
+                android:textColor="@color/navy"
+                android:textStyle="bold"
+                android:textSize="11dp"/>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/fotoAkhir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="foto akhir"
+                android:textColor="@color/navy"
+                android:textStyle="bold"
+                android:textSize="11dp"/>
+
+        </LinearLayout>
+
+        <!--    <ScrollView-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="0dp"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/title">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/kegiatanAllUserRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+        </LinearLayout>
+        <!--    </ScrollView>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

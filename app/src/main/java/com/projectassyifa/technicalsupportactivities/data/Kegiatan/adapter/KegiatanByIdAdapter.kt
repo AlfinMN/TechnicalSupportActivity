@@ -38,7 +38,7 @@ private lateinit var  fm : FragmentManager
         holder.tanggal.text = kegiatanList[position].tanggal
         holder.aktivitas.text = kegiatanList[position].aktivitas
         holder.status.text = kegiatanList[position].status
-        holder.id.text = kegiatanList[position].id
+//        holder.id.text = kegiatanList[position].id
         holder.deskripsi.text = kegiatanList[position].remark
 
 
@@ -97,7 +97,7 @@ class KegiatanViewHolder (v: View) : RecyclerView.ViewHolder(v){
     var aktivitas = v.findViewById<TextView>(R.id.aktivitas)
     var status = v.findViewById<TextView>(R.id.status)
     var foto_kegiatan = v.findViewById<ImageView>(R.id.fotoKegiatan)
-    var id = v.findViewById<TextView>(R.id.id)
+//    var id = v.findViewById<TextView>(R.id.id)
     var deskripsi = v.findViewById<TextView>(R.id.deskripsi)
     var fotoProses = v.findViewById<ImageView>(R.id.fotoProses)
     var fotoAkhir = v.findViewById<ImageView>(R.id.fotoAkhir)

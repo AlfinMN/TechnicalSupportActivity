@@ -22,7 +22,8 @@
         android:theme="@style/Theme.TechnicalSupportActivities"
         android:usesCleartextTraffic="true"
         tools:node="replace">
-        <activity android:name=".activity.ReportActivity"></activity>
+        <activity android:name=".activity.ReportAllUser"></activity>
+        <activity android:name=".activity.ReportActivity" />
         <activity android:name=".activity.UpdateStatus" />
         <activity android:name=".utils.AlertSaved" />
         <activity android:name=".utils.UploadingCamera" />

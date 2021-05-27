@@ -1,6 +1,7 @@
 package com.projectassyifa.technicalsupportactivities.screen
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +9,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import com.projectassyifa.technicalsupportactivities.MainActivity
 import com.projectassyifa.technicalsupportactivities.R
+import com.projectassyifa.technicalsupportactivities.activity.LoginActivity
+import com.projectassyifa.technicalsupportactivities.activity.ReportActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_profil_screen.*
 
@@ -61,8 +65,12 @@ class ProfilScreen : Fragment(),View.OnClickListener {
                 with(sharedPreferences?.edit()) {
                     this?.clear()
                     this?.apply()
-                    v?.findNavController()
-                        ?.navigate(R.id.action_homeScreen_to_mainActivity2)
+                    Intent(getContext(), LoginActivity::class.java).apply {
+                        addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    }.also {  startActivity(it) }
+//                    v?.findNavController()
+//                        ?.navigate(R.id.action_homeScreen_to_mainActivity2)
                 }
             }
         }
