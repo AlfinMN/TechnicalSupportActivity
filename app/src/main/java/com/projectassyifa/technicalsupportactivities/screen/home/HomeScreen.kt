@@ -9,13 +9,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.projectassyifa.technicalsupportactivities.R
-import com.projectassyifa.technicalsupportactivities.activity.HomeActivity
-import com.projectassyifa.technicalsupportactivities.activity.ReportActivity
-import com.projectassyifa.technicalsupportactivities.activity.ReportAllUser
+import com.projectassyifa.technicalsupportactivities.activity.*
 import com.projectassyifa.technicalsupportactivities.container.MyApplication
 import com.projectassyifa.technicalsupportactivities.data.Kegiatan.adapter.KegiatanByIdAdapter
 import com.projectassyifa.technicalsupportactivities.data.Kegiatan.viewmodel.KegiatanByIdViewModel
@@ -25,10 +24,6 @@ import javax.inject.Inject
 class HomeScreen : Fragment() {
 
     var sharedPreferences : SharedPreferences? = null
-
-//    @Inject
-//    lateinit var kegiatanByIdViewModel: KegiatanByIdViewModel
-//    lateinit var kegiatanByIdAdapter: KegiatanByIdAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,24 +43,33 @@ class HomeScreen : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-//        kegiatanRecycleView.layoutManager = LinearLayoutManager(context,RecyclerView.VERTICAL,false)
-//        kegiatanByIdViewModel.dataById?.observe(viewLifecycleOwner, Observer {
-//            kegiatanByIdAdapter = KegiatanByIdAdapter(it,requireActivity())
-//            kegiatanRecycleView.adapter = kegiatanByIdAdapter
-//            println("INI REVYCLE VIEW KEGIATAN $kegiatanByIdAdapter")
-//        })
-
         val firstname = sharedPreferences?.getString(
             getString(R.string.firstname),
             getString(R.string.default_value)
         )
-        val idAkun = sharedPreferences?.getString(
-            getString(R.string.id_akun),
+        val idPegawai = sharedPreferences?.getString(
+            getString(R.string.id_pegawai),
             getString(R.string.default_value)
         )
-        hiText.text="Hi $firstname"
-//        kegiatanByIdViewModel.kegiatanById(idAkun.toString())
+        val akun_level = sharedPreferences?.getString(
+                getString(R.string.akun_level),
+                getString(R.string.default_value)
+        )
+        val namaPegawai = sharedPreferences?.getString(
+                getString(R.string.nama_pegawai),
+                getString(R.string.default_value)
+        )
+
+        if (idPegawai== "1532") {
+            btn_reportUser.isVisible = true
+            reportUserText.isVisible = true
+
+        } else {
+            btn_reportUser.isVisible = false
+            reportUserText.isVisible = false
+        }
+
+        hiText.text="Hi, $namaPegawai"
         btn_report.setOnClickListener {
             val intent = Intent(getContext(), ReportActivity::class.java)
             startActivity(intent)
@@ -74,5 +78,13 @@ class HomeScreen : Fragment() {
             val intent = Intent(getContext(), ReportAllUser::class.java)
             startActivity(intent)
         }
+//        btn_addtask.setOnClickListener {
+//            val intent = Intent(getContext(), AddJob::class.java)
+//            startActivity(intent)
+//        }
+//        btn_member.setOnClickListener {
+//            val intent = Intent(getContext(), ListUserActivity::class.java)
+//            startActivity(intent)
+//        }
     }
 }

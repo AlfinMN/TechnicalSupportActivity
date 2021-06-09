@@ -70,7 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Activity Report"
+        android:text="Laporan Kegiatan"
         android:textColor="@color/navy"
         android:textSize="24dp"
         android:textStyle="bold"
@@ -105,89 +105,102 @@
 <!--            android:text="Id"-->
 <!--            android:textColor="@color/navy"-->
 <!--            />-->
-        <TextView
-            android:gravity="center"
-            android:id="@+id/lokasi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:textSize="11dp"
-            android:text="Lok"
-            android:textColor="@color/navy"
-            />
+<!--        <TextView-->
+<!--            android:gravity="center"-->
+<!--            android:id="@+id/lokasi"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="11dp"-->
+<!--            android:text="Lok"-->
+<!--            android:textColor="@color/navy"-->
+<!--            />-->
 
         <TextView
+            android:layout_margin="4dp"
             android:gravity="center"
             android:id="@+id/tanggal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Tgl"
+            android:text="Tanggal"
             android:textColor="@color/navy"
             android:textStyle="bold"
-            android:textSize="11dp" />
+            android:textSize="14dp" />
 
         <TextView
+            android:layout_margin="4dp"
             android:gravity="center"
             android:id="@+id/aktivitas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="akt"
+            android:text="Aktivitas"
             android:textColor="@color/navy"
             android:textStyle="bold"
-            android:textSize="11dp"/>
+            android:textSize="14dp"/>
+<!--        <TextView-->
+<!--            android:gravity="center"-->
+<!--            android:id="@+id/deskripsi"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="des"-->
+<!--            android:textColor="@color/navy"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="11dp"/>-->
         <TextView
-            android:gravity="center"
-            android:id="@+id/deskripsi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="des"
-            android:textColor="@color/navy"
-            android:textStyle="bold"
-            android:textSize="11dp"/>
-        <TextView
+            android:layout_margin="4dp"
             android:gravity="center"
             android:id="@+id/status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="status"
+            android:text="Status"
             android:textColor="@color/navy"
             android:textStyle="bold"
-            android:textSize="11dp"/>
+            android:textSize="14dp"/>
         <TextView
+            android:layout_margin="4dp"
             android:gravity="center"
-            android:id="@+id/foto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="foto awal"
+            android:text="Aksi"
             android:textColor="@color/navy"
             android:textStyle="bold"
-            android:textSize="11dp"/>
-        <TextView
-            android:gravity="center"
-            android:id="@+id/fotoProses"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="foto proses"
-            android:textColor="@color/navy"
-            android:textStyle="bold"
-            android:textSize="11dp"/>
-        <TextView
-            android:gravity="center"
-            android:id="@+id/fotoAkhir"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="foto akhir"
-            android:textColor="@color/navy"
-            android:textStyle="bold"
-            android:textSize="11dp"/>
+            android:textSize="14dp"/>
+<!--        <TextView-->
+<!--            android:gravity="center"-->
+<!--            android:id="@+id/foto"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="foto awal"-->
+<!--            android:textColor="@color/navy"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="11dp"/>-->
+<!--        <TextView-->
+<!--            android:gravity="center"-->
+<!--            android:id="@+id/fotoProses"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="foto proses"-->
+<!--            android:textColor="@color/navy"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="11dp"/>-->
+<!--        <TextView-->
+<!--            android:gravity="center"-->
+<!--            android:id="@+id/fotoAkhir"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="foto akhir"-->
+<!--            android:textColor="@color/navy"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="11dp"/>-->
 
     </LinearLayout>
 
@@ -198,13 +211,18 @@
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toBottomOf="@+id/title">-->
-
+<!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="400dp"-->
+<!--        android:id="@+id/swipeToRefresh"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/title">-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/title">
+     >
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/kegiatanRecycleView"
@@ -213,7 +231,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title" />
+
     </LinearLayout>
+<!--</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
 <!--    </ScrollView>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

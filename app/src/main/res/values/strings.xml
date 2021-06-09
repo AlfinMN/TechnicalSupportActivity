@@ -13,6 +13,12 @@
     <string name="akun_level">Akun Level</string>
     <string name="login_method_key">LOGIN_METHOD</string>
     <string name="default_value">Default</string>
+    <string name="id_pegawai">Id Pegawai</string>
+    <string name="nama_pegawai">Nama Pegawai</string>
+    <string name="nip">NIP</string>
+    <string name="foto">Foto Pegawai</string>
+    <string name="no_tlp">Nomer Tlp</string>
+    <string name="unit">UNIT</string>
     <!--
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.

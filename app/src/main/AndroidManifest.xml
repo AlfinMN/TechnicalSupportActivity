@@ -14,7 +14,7 @@
         android:exported="true"
         android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_aplikasi"
-        android:label="@string/app_name"
+        android:label="Record Activities"
         android:largeHeap="true"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_aplikasi_round"
@@ -22,7 +22,13 @@
         android:theme="@style/Theme.TechnicalSupportActivities"
         android:usesCleartextTraffic="true"
         tools:node="replace">
-        <activity android:name=".activity.ReportAllUser"></activity>
+        <activity android:name=".screen.kegiatan.DetailKegiatanAllUser"></activity>
+        <activity android:name=".screen.kegiatan.DetailKegiatan" />
+        <activity android:name=".activity.AddAnggotaActivity" />
+        <activity android:name=".activity.ListUserActivity" />
+        <activity android:name=".activity.AddJob" />
+        <activity android:name=".screen.kegiatan.LihatFotoKegiatan" />
+        <activity android:name=".activity.ReportAllUser" />
         <activity android:name=".activity.ReportActivity" />
         <activity android:name=".activity.UpdateStatus" />
         <activity android:name=".utils.AlertSaved" />

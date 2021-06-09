@@ -17,4 +17,5 @@ interface UpdateStatusAPI {
                      @Part foto_proses : MultipartBody.Part?= null,
                      @Part foto_akhir : MultipartBody.Part?= null
     ):Call<KerangkaResponse>
+
 }

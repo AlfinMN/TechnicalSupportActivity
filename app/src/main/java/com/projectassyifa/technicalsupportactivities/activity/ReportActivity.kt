@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.widget.DatePicker
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -40,6 +41,9 @@ class ReportActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_report)
+
+//        refreshApp()
+
         val loading = LoadingDialog(this)
         loading.startLoading()
         val handler = Handler()
@@ -70,7 +74,11 @@ class ReportActivity : AppCompatActivity() {
             getString(R.string.id_akun),
             getString(R.string.default_value)
         )
-      kegiatanByIdViewModel.kegiatanById(idAkun.toString())
+        val idPegawai = sharedPreferences?.getString(
+                getString(R.string.id_pegawai),
+                getString(R.string.default_value)
+        )
+      kegiatanByIdViewModel.kegiatanById(idPegawai.toString())
 
         //tampil data kegiatan by range tanggal
 
@@ -138,6 +146,14 @@ class ReportActivity : AppCompatActivity() {
 
 
     }
+
+//    private fun refreshApp() {
+//       swipeToRefresh.setOnRefreshListener {
+//           onCreate(null)
+//           Toast.makeText(this,"refresh",Toast.LENGTH_SHORT).show()
+//       swipeToRefresh.isRefreshing = false
+//       }
+//    }
 
     private fun updateDateInView() {
         val myFormat = "yyyy-MM-dd" // mention the format you need

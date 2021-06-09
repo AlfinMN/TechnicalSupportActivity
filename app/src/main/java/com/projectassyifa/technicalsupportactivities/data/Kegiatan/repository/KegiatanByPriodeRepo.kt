@@ -6,6 +6,7 @@ import com.google.gson.reflect.TypeToken
 import com.projectassyifa.technicalsupportactivities.data.Kegiatan.api.GetKegiatanByPriodeAPI
 import com.projectassyifa.technicalsupportactivities.data.Kegiatan.model.AddKegiatanModel
 import com.projectassyifa.technicalsupportactivities.utils.KerangkaResponse
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -28,6 +29,11 @@ class KegiatanByPriodeRepo @Inject constructor(val getKegiatanByPriodeAPI: GetKe
                     val kegiatanOutputList: List<AddKegiatanModel> =
                             gson.fromJson(gson.toJson(res), listKegiatan)
                     dataByPriode.value = kegiatanOutputList
+                    val responBody : ResponseBody? = null
+
+
+                    responBody?.close()
+
                     println("reponse $res")
                     println("output $kegiatanOutputList")
                 }

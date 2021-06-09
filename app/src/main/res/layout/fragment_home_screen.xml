@@ -58,14 +58,14 @@
         android:src="@drawable/reportmenu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headHome" />
-    <ImageView
-        android:id="@+id/btn_member"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_margin="40dp"
-        android:src="@drawable/member"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headHome" />
+<!--    <ImageView-->
+<!--        android:id="@+id/btn_member"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_margin="40dp"-->
+<!--        android:src="@drawable/member"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/headHome" />-->
 
     <ImageView
         android:id="@+id/btn_reportUser"
@@ -73,24 +73,33 @@
         android:layout_height="100dp"
         android:layout_margin="40dp"
         android:src="@drawable/reportuser"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_report" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Anggota"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        android:textColor="@color/navy"
-        app:layout_constraintEnd_toEndOf="@+id/btn_member"
-        app:layout_constraintStart_toStartOf="@+id/btn_member"
-        app:layout_constraintTop_toBottomOf="@+id/btn_member" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headHome" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/btn_addtask"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_margin="40dp"-->
+<!--        android:src="@drawable/addtask"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btn_report" />-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Anggota"-->
+<!--        android:textSize="17dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="@color/navy"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/btn_member"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/btn_member"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btn_member" />-->
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Report"
+        android:text="Laporan"
         android:textColor="@color/navy"
         android:textSize="17dp"
         android:textStyle="bold"
@@ -99,15 +108,28 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_report" />
 
     <TextView
+        android:id="@+id/reportUserText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Report User"
+        android:text="Laporan Anggota"
         android:textColor="@color/navy"
         android:textSize="17dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/btn_report"
-        app:layout_constraintStart_toStartOf="@+id/btn_report"
+        app:layout_constraintEnd_toEndOf="@+id/btn_reportUser"
+        app:layout_constraintStart_toStartOf="@+id/btn_reportUser"
         app:layout_constraintTop_toBottomOf="@+id/btn_reportUser" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/addtask"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Membuat Pekerjaan"-->
+<!--        android:textColor="@color/navy"-->
+<!--        android:textSize="17dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/btn_addtask"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/btn_addtask"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btn_addtask" />-->
 <!--    <TextView-->
 <!--        android:id="@+id/activitytext"-->
 <!--        android:layout_width="match_parent"-->

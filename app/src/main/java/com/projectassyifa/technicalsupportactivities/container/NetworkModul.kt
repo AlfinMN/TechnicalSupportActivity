@@ -3,6 +3,9 @@ package com.projectassyifa.technicalsupportactivities.container
 import com.projectassyifa.technicalsupportactivities.config.Connect
 import com.projectassyifa.technicalsupportactivities.data.Kegiatan.api.*
 import com.projectassyifa.technicalsupportactivities.data.login.api.UserLoginAPI
+import com.projectassyifa.technicalsupportactivities.data.login.api.UserloginAltAPI
+import com.projectassyifa.technicalsupportactivities.data.user.api.AddUserAPI
+import com.projectassyifa.technicalsupportactivities.data.user.api.GetUserAPI
 import com.projectassyifa.technicalsupportactivities.data.user.api.GetUserByIdAPI
 import dagger.Module
 import dagger.Provides
@@ -12,6 +15,10 @@ class NetworkModul {
     @Provides
     fun provideUserLoginAPI(): UserLoginAPI {
         return Connect.urlGlobal().create(UserLoginAPI::class.java)
+    }
+    @Provides
+    fun provideUserloginAltAPI(): UserloginAltAPI {
+        return Connect.urlAlternatif().create(UserloginAltAPI::class.java)
     }
     @Provides
     fun provideAddKegiatanAPI(): AddKegiatanAPI {
@@ -30,11 +37,19 @@ class NetworkModul {
         return Connect.urlGlobal().create(GetUserByIdAPI::class.java)
     }
     @Provides
+    fun provideGetUserAPI(): GetUserAPI {
+        return Connect.urlGlobal().create(GetUserAPI::class.java)
+    }
+    @Provides
     fun provideUpdateStatusAPI(): UpdateStatusAPI {
         return Connect.urlGlobal().create(UpdateStatusAPI::class.java)
     }
     @Provides
     fun provideGetKegiatanByPriodeAPI(): GetKegiatanByPriodeAPI {
         return Connect.urlGlobal().create(GetKegiatanByPriodeAPI::class.java)
+    }
+    @Provides
+    fun provideAddUserAPI(): AddUserAPI {
+        return Connect.urlGlobal().create(AddUserAPI::class.java)
     }
 }

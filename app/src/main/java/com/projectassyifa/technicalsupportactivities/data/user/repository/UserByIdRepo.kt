@@ -7,6 +7,7 @@ import com.projectassyifa.technicalsupportactivities.data.Kegiatan.model.AddKegi
 import com.projectassyifa.technicalsupportactivities.data.user.api.GetUserByIdAPI
 import com.projectassyifa.technicalsupportactivities.data.user.model.UserModel
 import com.projectassyifa.technicalsupportactivities.utils.KerangkaResponse
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,6 +30,13 @@ class UserByIdRepo @Inject constructor(val getUserByIdAPI: GetUserByIdAPI) {
                     val UserOutputList: List<UserModel> =
                             gson.fromJson(gson.toJson(res), listKegiatan)
                     dataUserById.value = UserOutputList
+                    val responBody : ResponseBody? = null
+
+
+                        responBody?.close()
+
+
+
                     println("reponse BY ID $res")
                 }
             }

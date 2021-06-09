@@ -1,5 +1,6 @@
 package com.projectassyifa.technicalsupportactivities.data.Kegiatan.repository
 
+import android.system.Os.close
 import androidx.lifecycle.MutableLiveData
 import com.google.gson.Gson
 import com.projectassyifa.technicalsupportactivities.data.Kegiatan.api.AddKegiatanAPI
@@ -8,6 +9,7 @@ import com.projectassyifa.technicalsupportactivities.utils.KerangkaResponse
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,12 +21,13 @@ class AddKegiatanRepo @Inject constructor(val addKegiatanAPI: AddKegiatanAPI) {
 
     fun addKegiatan(data:AddKegiatanModel,file :File){
         val id_akun = convert(data.id_akun)
+        val nama_pegawai = convert(data.nama_pegawai)
         val lokasi = convert(data.lokasi)
         val aktivitas = convert(data.aktivitas)
         val remark = convert(data.remark)
         val foto_awal = convertFile(file)
 
-        addKegiatanAPI.addKegiatan(id_akun,aktivitas,lokasi,remark,foto_awal).enqueue(object : Callback<KerangkaResponse> {
+        addKegiatanAPI.addKegiatan(id_akun,nama_pegawai,aktivitas,lokasi,remark,foto_awal).enqueue(object : Callback<KerangkaResponse> {
             override fun onResponse(call: Call<KerangkaResponse>, response: Response<KerangkaResponse>) {
                val res = response.body()
                 println("MASUK REPO ADD ${res}")

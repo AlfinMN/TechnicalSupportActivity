@@ -65,12 +65,21 @@ class InsertKegiatan : AppCompatActivity() {
                 getString(R.string.id_akun),
                 getString(R.string.default_value)
         )
+        val idPegawai = sharedPreferences?.getString(
+                getString(R.string.id_pegawai),
+                getString(R.string.default_value)
+        )
+        val namaPegawai = sharedPreferences?.getString(
+                getString(R.string.nama_pegawai),
+                getString(R.string.default_value)
+        )
         println("ID AKUN $idAkun")
 
         //simpan kegiatan
         savekegiatan.setOnClickListener {
             val addKegiatanContent = AddKegiatanModel()
-            addKegiatanContent.id_akun = idAkun.toString()
+            addKegiatanContent.id_akun = idPegawai.toString()
+            addKegiatanContent.nama_pegawai = namaPegawai.toString()
             addKegiatanContent.aktivitas = aktivitasinput.text.toString()
             addKegiatanContent.lokasi = lokasiInput.text.toString()
             addKegiatanContent.remark = remarkinput.text.toString()
@@ -124,11 +133,6 @@ class InsertKegiatan : AppCompatActivity() {
                 println("HASIL IMAGE $fileImage")
                 println("NAMA IMAGE $namaImage")
                 nama_file.setText(imageFile?.name)
-//                image_upload.setImageURI(selectedImage)
-//               Picasso.with(this@InsertKegiatan).load(imageFile)
-//                    .placeholder(R.drawable.upload)
-//                    .error(R.drawable.upload)
-//                    .into(image_upload);
                 val requestOptions = RequestOptions().error(R.drawable.upload)
                 Glide.with(this@InsertKegiatan)
                     .load(imageFile)
@@ -137,43 +141,6 @@ class InsertKegiatan : AppCompatActivity() {
             }
 
         });
-//        if (requestCode == cameraRequestId){
-//            var selectedImage = data?.data
-//            /**save to Image In layout*/
-//            val images:Bitmap= data?.extras?.get("data") as Bitmap
-//            image_upload.setImageBitmap(images)
-//            image_upload.setImageURI(selectedImage)
-//            nama_file.setText(images)
-//            println("ACTIVITY RESULT")
-//            println("ini gambar $images")
-//        }
 
-//        val loading = UploadingProgress(this)
-//        loading.startLoading()
-//        val handler = Handler()
-//        handler.postDelayed(object :Runnable{
-//            override fun run() {
-//                loading.isDismiss()
-//            }
-//
-//        },3000)
-
-
-//        EasyImage.handleActivityResult(requestCode, resultCode, data, this, object : DefaultCallback() {
-//            var selectedImage = data?.data
-//            override fun onImagePicked(
-//                    imageFile: File?,
-//                    source: EasyImage.ImageSource?,
-//                    type: Int
-//            ) {
-//                fileImage = imageFile
-//                var namaImage = imageFile?.name
-//                println("HASIL IMAGE $fileImage")
-//                println("NAMA IMAGE $namaImage")
-//                nama_file.setText(imageFile?.name)
-//                image_upload.setImageURI(selectedImage)
-//            }
-//
-//        });
     }
 }

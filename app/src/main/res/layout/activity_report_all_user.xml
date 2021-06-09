@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="30dp"
-            android:text="Report All User"
+            android:text="Laporan Kegiatan Anggota"
             android:textColor="@color/navy"
             android:textSize="24dp"
             android:textStyle="bold"
@@ -105,24 +105,13 @@
                         android:text="Nama"
                         android:textColor="@color/navy"
                         />
-            <TextView
-                android:gravity="center"
-                android:id="@+id/lokasi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textStyle="bold"
-                android:textSize="11dp"
-                android:text="Lok"
-                android:textColor="@color/navy"
-                />
 
             <TextView
                 android:gravity="center"
                 android:id="@+id/tanggal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="1.2"
                 android:text="Tgl"
                 android:textColor="@color/navy"
                 android:textStyle="bold"
@@ -133,58 +122,19 @@
                 android:id="@+id/aktivitas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="1.2"
                 android:text="akt"
                 android:textColor="@color/navy"
                 android:textStyle="bold"
                 android:textSize="11dp"/>
-            <TextView
-                android:gravity="center"
-                android:id="@+id/deskripsi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="des"
-                android:textColor="@color/navy"
-                android:textStyle="bold"
-                android:textSize="11dp"/>
-            <TextView
-                android:gravity="center"
-                android:id="@+id/status"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="status"
-                android:textColor="@color/navy"
-                android:textStyle="bold"
-                android:textSize="11dp"/>
-            <TextView
-                android:gravity="center"
-                android:id="@+id/foto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="foto awal"
-                android:textColor="@color/navy"
-                android:textStyle="bold"
-                android:textSize="11dp"/>
-            <TextView
-                android:gravity="center"
-                android:id="@+id/fotoProses"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="foto proses"
-                android:textColor="@color/navy"
-                android:textStyle="bold"
-                android:textSize="11dp"/>
+
             <TextView
                 android:gravity="center"
                 android:id="@+id/fotoAkhir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="foto akhir"
+                android:layout_weight="1.2"
+                android:text="Aksi"
                 android:textColor="@color/navy"
                 android:textStyle="bold"
                 android:textSize="11dp"/>

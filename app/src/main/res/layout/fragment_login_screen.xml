@@ -17,11 +17,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="80dp"
+        android:gravity="center"
+        android:text="Record Activities"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:layout_width="230dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="11dp"
-        android:src="@drawable/logobit"
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logoasifa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/headlogin" />
 
@@ -29,8 +45,7 @@
         android:id="@+id/welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to
-\n Technical Support Activity Report"
+        android:text="Login"
         android:gravity="center"
         android:layout_marginTop="50dp"
         android:textColor="@color/navy"
@@ -72,7 +87,8 @@
                 android:layout_marginBottom="10dp"
                 android:focusedByDefault="false"
                 android:textColorHint="@color/navy"
-                app:hintTextColor="@color/navy">
+                app:hintTextColor="@color/navy"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/usernameInput"

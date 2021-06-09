@@ -8,6 +8,7 @@ import com.projectassyifa.technicalsupportactivities.utils.KerangkaResponse
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -39,6 +40,11 @@ class UpdateStatusRepo @Inject constructor(val updateStatusAPI: UpdateStatusAPI)
                     val stringResponse = Gson().toJson(res)
                     val updateStatusContent = Gson().fromJson<KerangkaResponse>(stringResponse,KerangkaResponse::class.java)
                     kegiatanResponse.value=updateStatusContent
+                    val responBody : ResponseBody? = null
+
+
+                    responBody?.close()
+
                 }
 
                 override fun onFailure(call: Call<KerangkaResponse>, t: Throwable) {

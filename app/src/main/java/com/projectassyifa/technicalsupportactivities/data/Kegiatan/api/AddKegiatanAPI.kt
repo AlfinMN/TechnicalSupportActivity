@@ -12,6 +12,7 @@ interface AddKegiatanAPI {
     @Multipart
     @POST ("api/krt/dataActivities")
     fun addKegiatan(@Part("id_akun")id_akun : RequestBody,
+                    @Part("nama_pegawai") nama_pegawai :RequestBody,
                     @Part("aktivitas") aktivitas :RequestBody,
                     @Part("lokasi") lokasi :RequestBody,
                     @Part("remark") remark :RequestBody,

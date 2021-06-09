@@ -4,17 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#192160">
-
-    <ImageView
-        android:id="@+id/imagelaunch"
+    tools:context=".MainActivity">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logobit" />
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/welcome" />
+
+    <ImageView
+        android:id="@+id/imagelaunch"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lottieAnimationView"
+        app:srcCompat="@drawable/ic_launch" />
+
+    <ImageView
+        android:id="@+id/imagelaunch1"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagelaunch"
+        app:srcCompat="@drawable/launch" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

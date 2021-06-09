@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="7dp"
+        android:layout_margin="5dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,78 +24,40 @@
                     android:text="nama"
                     android:textStyle="bold"
                     android:textColor="@color/navy"
-                    android:textSize="9dp" />
-        <TextView
-            android:layout_margin="2dp"
-            android:gravity="center"
-            android:id="@+id/lokasi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Lokasi"
-            android:textColor="@color/navy"
-            android:textSize="9dp" />
-
+                    android:textSize="12dp" />
         <TextView
             android:layout_margin="2dp"
             android:gravity="center"
             android:id="@+id/tanggal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:text="Tanggal"
             android:textColor="@color/navy"
-            android:textSize="9dp" />
-
+            android:textSize="12dp" />
         <TextView
             android:layout_margin="2dp"
             android:gravity="center"
             android:id="@+id/aktivitas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="aktivitas"
+            android:layout_weight="1.2"
+            android:text="Aktivitas"
             android:textColor="@color/navy"
-            android:textSize="9dp" />
-        <TextView
-            android:layout_margin="2dp"
-            android:gravity="center"
-            android:id="@+id/deskripsi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="deskripsi"
-            android:textColor="@color/navy"
-            android:textSize="9dp" />
-        <TextView
-            android:layout_margin="2dp"
+            android:textSize="12dp" />
+        <Button
+
             android:gravity="center"
             android:clickable="true"
-            android:id="@+id/status"
+            android:id="@+id/btn_detailUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="status"
+            android:layout_weight="1.2"
+            android:text="Detail"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/navy"
             android:textStyle="bold"
-            android:textColor="@color/navy"
+            android:textColor="@color/white"
             android:textSize="10dp" />
-        <ImageView
-            android:layout_margin="2dp"
-            android:id="@+id/fotoKegiatan"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            />
-        <ImageView
-            android:layout_margin="2dp"
-            android:id="@+id/fotoProses"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            />
-        <ImageView
-            android:layout_margin="2dp"
-            android:id="@+id/fotoAkhir"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

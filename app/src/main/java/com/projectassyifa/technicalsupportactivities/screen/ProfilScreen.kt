@@ -51,9 +51,16 @@ class ProfilScreen : Fragment(),View.OnClickListener {
             getString(R.string.akun_level),
             getString(R.string.default_value)
         )
-
-        namauser.text = "$firstname" + " " + "$lastname"
-        jabatan.text = "$akun_level"
+        val namaPegawai = sharedPreferences?.getString(
+                getString(R.string.nama_pegawai),
+                getString(R.string.default_value)
+        )
+        val unit = sharedPreferences?.getString(
+                getString(R.string.unit),
+                getString(R.string.default_value)
+        )
+        namauser.text = "$namaPegawai"
+        jabatan.text = "$unit"
 
         logout.setOnClickListener(this)
     }
