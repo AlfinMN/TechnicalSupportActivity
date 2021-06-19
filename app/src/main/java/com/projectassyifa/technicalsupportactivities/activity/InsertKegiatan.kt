@@ -61,6 +61,8 @@ class InsertKegiatan : AppCompatActivity() {
 //            val cameraInt = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
 //            startActivityForResult(cameraInt,cameraRequestId)
         }
+
+
         val idAkun = sharedPreferences?.getString(
                 getString(R.string.id_akun),
                 getString(R.string.default_value)
