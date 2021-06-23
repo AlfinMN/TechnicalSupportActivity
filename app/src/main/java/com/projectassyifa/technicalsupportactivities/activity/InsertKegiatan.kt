@@ -19,6 +19,7 @@ import android.content.SharedPreferences
 import android.graphics.Bitmap
 import android.icu.number.NumberFormatter.with
 import android.provider.MediaStore
+import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.core.graphics.get
 import androidx.core.net.toFile
@@ -57,9 +58,24 @@ class InsertKegiatan : AppCompatActivity() {
                     cameraRequestId
             )
         chose_file.setOnClickListener {
-            EasyImage.openCamera(this,1)
-//            val cameraInt = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-//            startActivityForResult(cameraInt,cameraRequestId)
+//            EasyImage.openCamera(this,1)
+//EasyImage.openGallery(this,1)
+        val popMenu = PopupMenu(this,it)
+            popMenu.setOnMenuItemClickListener { item ->
+                when(item.itemId){
+                    R.id.opencamera -> {
+                        EasyImage.openCamera(this,1)
+                        true
+                    }
+                    R.id.openfile -> {
+                        EasyImage.openGallery(this,1)
+                        true
+                    }
+                    else -> false
+                }
+            }
+            popMenu.inflate(R.menu.upload)
+            popMenu.show()
         }
 
 
